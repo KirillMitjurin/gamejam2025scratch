@@ -175,4 +175,4 @@ shape = SubResource("RectangleShape2D_fdpfy")
 [node name="PlayerSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bwbw2")
 animation = &"walking_left"
-frame_progress = 0.12994076
+frame_progress = 0.66879725

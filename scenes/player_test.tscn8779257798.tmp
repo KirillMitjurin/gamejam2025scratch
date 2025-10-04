@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://s13tjna5afkf"]
+[gd_scene load_steps=6 format=3 uid="uid://s13tjna5afkf"]
 
 [ext_resource type="Texture2D" uid="uid://bpt0gayi0r8ov" path="res://art/icon.svg" id="1_a8v3n"]
 [ext_resource type="PackedScene" uid="uid://vguyrvic8o2k" path="res://objects/player/player.tscn" id="1_fdpfy"]
 [ext_resource type="Script" uid="uid://bcus32sb27hu1" path="res://objects/player/player.gd" id="2_6p80c"]
 [ext_resource type="PackedScene" uid="uid://xje35ovjqwu3" path="res://objects/bottles/plastic_bottle.tscn" id="4_2ue4q"]
 [ext_resource type="PackedScene" uid="uid://bp1wyv3c223k1" path="res://objects/bottles/glass_bottle.tscn" id="6_4fwf8"]
-[ext_resource type="PackedScene" uid="uid://bc7ctq1qphuy4" path="res://objects/bottles/turbo_bottle.tscn" id="6_dxymg"]
 
 [node name="player_test" type="Node2D"]
 
@@ -24,11 +23,8 @@ z_index = -50
 position = Vector2(179, 154)
 texture = ExtResource("1_a8v3n")
 
-[node name="plastic_bottle" parent="." instance=ExtResource("6_4fwf8")]
-position = Vector2(35, 164)
+[node name="glass_bottle" parent="." instance=ExtResource("6_4fwf8")]
+position = Vector2(42, 121)
 
-[node name="plastic_bottle2" parent="." instance=ExtResource("4_2ue4q")]
-position = Vector2(63, 193)
-
-[node name="plastic_bottle3" parent="." instance=ExtResource("6_dxymg")]
-position = Vector2(128, 180)
+[node name="plastic_bottle" parent="." instance=ExtResource("4_2ue4q")]
+position = Vector2(123, 164)
