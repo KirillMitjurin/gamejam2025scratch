@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://capvx5vmyl1ti" path="res://art/MCsprites/back/4.png" id="16_3nl4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdpfy"]
-size = Vector2(18, 30)
+size = Vector2(18, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px1tj"]
 atlas = ExtResource("1_x5bgp")
@@ -170,6 +170,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_fdpfy")
 
 [node name="PlayerSprite2D" type="AnimatedSprite2D" parent="."]
