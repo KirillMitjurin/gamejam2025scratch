@@ -71,7 +71,7 @@ item_name = "Hat"
 price = 100
 speed_bonus = 25
 heat_bonus = 10
-message_label = NodePath("../bootsMessageLabel")
+message_label = NodePath("../hatMessageLabel")
 shop_ui = NodePath("../..")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer"]
@@ -83,7 +83,7 @@ offset_bottom = 43.039627
 scale = Vector2(2.0400004, 2.0400004)
 texture = ExtResource("5_ojcbc")
 
-[node name="bootsMessageLabel" type="Label" parent="TextureRect"]
+[node name="hatMessageLabel" type="Label" parent="TextureRect"]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 365.0
