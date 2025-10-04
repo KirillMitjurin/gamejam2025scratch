@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var hud: PlayerHud
 
 @export_range(0, 200)var speed = 200.0
 var anim
