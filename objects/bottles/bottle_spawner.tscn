@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://drmh4t54ot8hm"]
+
+[ext_resource type="Script" uid="uid://dp0yb7nn83j6o" path="res://objects/bottles/bottle_spawner.gd" id="1_8n33a"]
+[ext_resource type="PackedScene" uid="uid://bp1wyv3c223k1" path="res://objects/bottles/glass_bottle.tscn" id="2_jkkax"]
+[ext_resource type="Texture2D" uid="uid://ksjsl5tbgq3e" path="res://art/tile2.png" id="2_s1550"]
+[ext_resource type="PackedScene" uid="uid://bc7ctq1qphuy4" path="res://objects/bottles/turbo_bottle.tscn" id="3_jakhh"]
+[ext_resource type="PackedScene" uid="uid://xje35ovjqwu3" path="res://objects/bottles/plastic_bottle.tscn" id="4_2ws78"]
+
+[node name="bottle_spawner" type="Node2D"]
+script = ExtResource("1_8n33a")
+bottle_prefabs = Array[PackedScene]([ExtResource("2_jkkax"), ExtResource("3_jakhh"), ExtResource("4_2ws78")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s1550")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
