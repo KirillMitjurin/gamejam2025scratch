@@ -1,14 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://od885ktepu7l"]
+[gd_scene load_steps=7 format=3 uid="uid://od885ktepu7l"]
 
 [ext_resource type="Script" uid="uid://cqwrw8231c55m" path="res://scenes/start_menu.gd" id="1_4v6gu"]
 [ext_resource type="Texture2D" uid="uid://csmsncua5ucos" path="res://art/Menu/Background.png" id="1_fcv5n"]
 [ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="1_thu50"]
-[ext_resource type="Texture2D" uid="uid://b52g8otb0sdyw" path="res://art/Menu/start/Start.png" id="3_4v6gu"]
 [ext_resource type="PackedScene" uid="uid://bv0agghf41ede" path="res://audio/tech/music_player.tscn" id="3_m7x51"]
-[ext_resource type="Texture2D" uid="uid://dw67nqyg7vlj1" path="res://art/Menu/start/Start hover.png" id="4_nxjfj"]
 [ext_resource type="AudioStream" uid="uid://b3gif8c43crgj" path="res://audio/music/15 Step.mp3" id="5_fcv5n"]
-[ext_resource type="Texture2D" uid="uid://bgfdtpgresglo" path="res://art/Menu/exit/Exit.png" id="5_u4qax"]
-[ext_resource type="Texture2D" uid="uid://bbm45yrrvsaga" path="res://art/Menu/exit/Exit hover.png" id="7_nxjfj"]
 [ext_resource type="PackedScene" uid="uid://dgklfxmr2hhax" path="res://objects/UI/slider_container.tscn" id="8_u4qax"]
 
 [node name="StartMenu" type="Control"]
@@ -29,22 +25,26 @@ texture = ExtResource("1_fcv5n")
 
 [node name="ButtonContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 468.0
-offset_top = 320.0
-offset_right = 1393.0
-offset_bottom = 1406.0
-scale = Vector2(0.18525778, 0.18525778)
-theme_override_constants/separation = 48
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -6.0
+offset_right = 45.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="Start" parent="ButtonContainer" instance=ExtResource("1_thu50")]
+[node name="Play" parent="ButtonContainer" instance=ExtResource("1_thu50")]
 layout_mode = 2
-texture_normal = ExtResource("3_4v6gu")
-texture_hover = ExtResource("4_nxjfj")
+text = "Play"
 
 [node name="Exit" parent="ButtonContainer" instance=ExtResource("1_thu50")]
 layout_mode = 2
-texture_normal = ExtResource("5_u4qax")
-texture_hover = ExtResource("7_nxjfj")
+text = "Exit"
 
 [node name="SliderContainer" parent="." instance=ExtResource("8_u4qax")]
 layout_mode = 1
@@ -63,5 +63,5 @@ grow_vertical = 0
 [node name="MusicPlayer" parent="." instance=ExtResource("3_m7x51")]
 playlist = Array[AudioStream]([ExtResource("5_fcv5n")])
 
-[connection signal="pressed" from="ButtonContainer/Start" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ButtonContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ButtonContainer/Exit" to="." method="_on_exit_pressed"]
