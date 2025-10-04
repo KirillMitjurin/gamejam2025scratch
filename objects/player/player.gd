@@ -4,8 +4,7 @@ extends CharacterBody2D
 
 @export_range(0, 200)var speed = 200.0
 var anim
-
-
+@onready var local_hotness = PlayerData.heat
 @onready var player_sprite : AnimatedSprite2D = $PlayerSprite2D
 
 
@@ -23,6 +22,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, speed)
 	
+	
+	local_hotness -= delta
+	if local_hotness <= 0:
+		get_tree().change_scene_to_file("res://scenes/shopUI.tscn")	
 	# Player ANIMATION
 	anim = "idle"
 	
@@ -42,5 +45,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-func pickup_bottle(bottle : Bottle):
-	pass
+func pickup_bottle():
+	hud.update_bottle_count() 
