@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ksjsl5tbgq3e" path="res://art/tile2.png" id="4_ur7vp"]
 [ext_resource type="Texture2D" uid="uid://ctdfejbrp3n2t" path="res://art/stairs.png" id="5_6ylc7"]
 [ext_resource type="Texture2D" uid="uid://ck5tv56qw6hhi" path="res://art/tile2_2.png" id="6_eg2vv"]
-[ext_resource type="Texture2D" uid="uid://ceoc0cyl4gixe" path="res://art/tiletum.png" id="7_coua8"]
+[ext_resource type="Texture2D" uid="uid://ckw7rvwxy8vdk" path="res://art/tiletum.png" id="7_coua8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qtbut"]
 texture = ExtResource("1_0mcb4")
