@@ -11,6 +11,8 @@ func _ready():
 	
 func update_ui(): 
 	label_money.text = "Money: %d" %PlayerData.money
+	print(PlayerData.speed)
+	print(PlayerData.speed)
 	
 func _on_close_button_pressed():
 	hide()

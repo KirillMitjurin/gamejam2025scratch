@@ -1,49 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://od885ktepu7l"]
+[gd_scene load_steps=2 format=3 uid="uid://od885ktepu7l"]
 
-[ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="1_thu50"]
-[ext_resource type="PackedScene" uid="uid://cfhh37ndcorb7" path="res://objects/UI/volume_slider.tscn" id="2_m7x51"]
-[ext_resource type="PackedScene" uid="uid://bv0agghf41ede" path="res://audio/tech/music_player.tscn" id="3_m7x51"]
-[ext_resource type="AudioStream" uid="uid://n1gkwimr6vqv" path="res://audio/sfx/Bruh.mp3" id="4_h61rw"]
-[ext_resource type="AudioStream" uid="uid://b3gif8c43crgj" path="res://audio/music/15 Step.mp3" id="5_fcv5n"]
+[ext_resource type="Script" uid="uid://c66bflkampn1p" path="res://scenes/ItemButton.gd" id="1_ouf4f"]
 
-[node name="StartMenu" type="Control"]
+[node name="ItemButton" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Play" parent="VBoxContainer" instance=ExtResource("1_thu50")]
-layout_mode = 2
-
-[node name="Exit" parent="VBoxContainer" instance=ExtResource("1_thu50")]
-layout_mode = 2
-
-[node name="MusicSlider" parent="VBoxContainer" instance=ExtResource("2_m7x51")]
-layout_mode = 2
-bus_name = "Music"
-
-[node name="SFXSlider" parent="VBoxContainer" instance=ExtResource("2_m7x51")]
-layout_mode = 2
-bus_name = "SFX"
-
-[node name="MusicPlayer" parent="." instance=ExtResource("3_m7x51")]
-playlist = Array[AudioStream]([ExtResource("4_h61rw"), ExtResource("4_h61rw"), ExtResource("5_fcv5n")])
-
-[editable path="VBoxContainer/Play"]
-[editable path="VBoxContainer/Exit"]
+script = ExtResource("1_ouf4f")
