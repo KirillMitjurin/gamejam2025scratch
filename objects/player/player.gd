@@ -6,6 +6,7 @@ extends CharacterBody2D
 var anim
 @onready var local_hotness = PlayerData.heat
 @onready var player_sprite : AnimatedSprite2D = $PlayerSprite2D
+@onready var heat_bar = $player
 
 
 func _physics_process(delta: float) -> void:
@@ -24,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	
 	
 	local_hotness -= delta
+	hud.update_temperature(local_hotness)
+	hud.update_heat_bar(local_hotness)
 	if local_hotness <= 0:
 		get_tree().change_scene_to_file("res://scenes/shopUI.tscn")	
 	# Player ANIMATION
