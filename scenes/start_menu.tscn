@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://od885ktepu7l"]
+[gd_scene load_steps=3 format=3 uid="uid://od885ktepu7l"]
+
+[ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="1_thu50"]
+[ext_resource type="PackedScene" uid="uid://cfhh37ndcorb7" path="res://objects/UI/volume_slider.tscn" id="2_m7x51"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +12,30 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" parent="VBoxContainer" instance=ExtResource("1_thu50")]
+layout_mode = 2
+
+[node name="Exit" parent="VBoxContainer" instance=ExtResource("1_thu50")]
+layout_mode = 2
+
+[node name="MusicSlider" parent="VBoxContainer" instance=ExtResource("2_m7x51")]
+layout_mode = 2
+
+[node name="SFXSlider" parent="VBoxContainer" instance=ExtResource("2_m7x51")]
+layout_mode = 2
+
+[editable path="VBoxContainer/Play"]
+[editable path="VBoxContainer/Exit"]
