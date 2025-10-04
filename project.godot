@@ -22,6 +22,7 @@ buses/default_bus_layout="res://audio/buses/bus_layout.tres"
 [autoload]
 
 PlayerData="*res://art/MCsprites/back/playerData.gd"
+SfxPlayer="*res://audio/tech/global_sfx_player.gd"
 
 [input]
 

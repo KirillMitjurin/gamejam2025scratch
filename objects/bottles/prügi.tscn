@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx2o74oaamdmv"]
+
+[ext_resource type="Texture2D" uid="uid://cgf7vnbbrajgu" path="res://art/prugi1.png" id="1_n5kee"]
+[ext_resource type="Texture2D" uid="uid://byhf0y8ed0xl8" path="res://art/prugi2.png" id="2_p3qwr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tt825"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_n5kee")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_p3qwr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Prügi" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_tt825")
+animation = &"idle"
+frame_progress = 0.7672191
