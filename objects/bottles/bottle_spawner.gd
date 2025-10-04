@@ -1,6 +1,11 @@
 extends Node2D
 
 @export var bottle_prefabs : Array[PackedScene]
+@onready var sprite = $"Sprite2D"
+
+func _ready() -> void:
+	sprite.hide()
+
 var random = RandomNumberGenerator.new()
 	
 func get_random_position(size) -> Vector2:

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs3trbss1ousv"]
+
+[ext_resource type="Texture2D" uid="uid://4oqmvvlrhdgp" path="res://art/NPC/punk1.png" id="1_wvtx6"]
+[ext_resource type="Texture2D" uid="uid://d26rjl3knoqfp" path="res://art/NPC/punk2.png" id="2_y4f6c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8csc5"]
+animations = [{
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_wvtx6")
+}, {
+"duration": 4.0,
+"texture": ExtResource("2_y4f6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eopsw"]
+radius = 4.0
+
+[node name="punk" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -3)
+sprite_frames = SubResource("SpriteFrames_8csc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_eopsw")

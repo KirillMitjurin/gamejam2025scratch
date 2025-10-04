@@ -7,14 +7,14 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_a6xjw"]
 animations = [{
 "frames": [{
-"duration": 10.0,
+"duration": 20.0,
 "texture": ExtResource("1_a6xjw")
 }, {
-"duration": 5.0,
-"texture": ExtResource("2_bmgtp")
-}, {
-"duration": 5.0,
+"duration": 7.0,
 "texture": ExtResource("3_761cx")
+}, {
+"duration": 7.0,
+"texture": ExtResource("2_bmgtp")
 }],
 "loop": true,
 "name": &"default",
@@ -28,8 +28,9 @@ radius = 5.0
 y_sort_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_a6xjw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 11)
+position = Vector2(0, 12)
 shape = SubResource("CircleShape2D_bmgtp")
