@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfhh37ndcorb7"]
+[gd_scene load_steps=3 format=3 uid="uid://cfhh37ndcorb7"]
 
 [ext_resource type="Script" uid="uid://biaw03tqcbw0w" path="res://objects/UI/volume_slider.gd" id="1_kjpn7"]
+[ext_resource type="Theme" uid="uid://b78t17c2jbeaq" path="res://themes/volume_slider.tres" id="1_sm2su"]
 
 [node name="VolumeSlider" type="HSlider"]
+theme = ExtResource("1_sm2su")
 max_value = 1.0
 step = 0.0
 script = ExtResource("1_kjpn7")

@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b78t17c2jbeaq"]
+
+[ext_resource type="Texture2D" uid="uid://c2gua7icg2l2l" path="res://art/Menu/bottle.png" id="1_ae8ac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ushi1"]
+bg_color = Color(0.83137256, 0.08627451, 0.08627451, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ae8ac"]
+bg_color = Color(0.83137256, 0.08627451, 0.08627451, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87oqf"]
+bg_color = Color(0.2, 0.023529412, 0.023529412, 1)
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_ae8ac")
+HSlider/icons/grabber_highlight = ExtResource("1_ae8ac")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ushi1")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ae8ac")
+HSlider/styles/slider = SubResource("StyleBoxFlat_87oqf")

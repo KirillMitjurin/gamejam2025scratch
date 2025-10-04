@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgklfxmr2hhax"]
+
+[ext_resource type="Theme" uid="uid://cc2y03ajubyu0" path="res://themes/button_text.tres" id="1_cfumd"]
+[ext_resource type="PackedScene" uid="uid://cfhh37ndcorb7" path="res://objects/UI/volume_slider.tscn" id="2_i3tig"]
+
+[node name="SliderContainer" type="VBoxContainer"]
+offset_right = 196.0
+offset_bottom = 178.0
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("1_cfumd")
+text = "Music"
+horizontal_alignment = 1
+
+[node name="Music" parent="." instance=ExtResource("2_i3tig")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="SFXLabel" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("1_cfumd")
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFX" parent="." instance=ExtResource("2_i3tig")]
+layout_mode = 2
+bus_name = "SFX"
