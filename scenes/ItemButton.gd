@@ -8,10 +8,13 @@ extends Button
 @export var message_label: Label
 @export var shop_ui: Control 
 
+
+
 func _ready():
 	connect("mouse_entered", Callable(self, "_on_hover"))
 	connect("mouse_exited", Callable(self, "_on_hover_exit"))
 	connect("pressed", Callable(self, "_on_pressed"))
+	
 
 func _on_hover(): 
 	if message_label:
@@ -27,7 +30,8 @@ func _on_pressed():
 		PlayerData.speed += speed_bonus
 		PlayerData.heat += heat_bonus
 		if message_label:
-			message_label.text = " %s is purchased, now speed %d %d" % [item_name, PlayerData.speed, PlayerData.heat] 
+			message_label.text = " %s is purchased, now speed %d %d" % [item_name, PlayerData.speed, PlayerData.heat]
+			 
 			
 		if shop_ui:
 			shop_ui.update_ui()
