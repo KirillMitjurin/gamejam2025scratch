@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbochtm4xvp5c"]
+
+[ext_resource type="Texture2D" uid="uid://cphkxxb26k447" path="res://art/NPC/altgirl1.png" id="1_a6xjw"]
+[ext_resource type="Texture2D" uid="uid://fjwxvwa67a05" path="res://art/NPC/altgirl2.png" id="2_bmgtp"]
+[ext_resource type="Texture2D" uid="uid://7tqvfphw1n4o" path="res://art/NPC/altgirl3.png" id="3_761cx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a6xjw"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("1_a6xjw")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_bmgtp")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_761cx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bmgtp"]
+radius = 5.0
+
+[node name="Altgirl" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a6xjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 11)
+shape = SubResource("CircleShape2D_bmgtp")

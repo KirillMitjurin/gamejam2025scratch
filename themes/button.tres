@@ -1,0 +1,46 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://drbplrxr88qty"]
+
+[ext_resource type="FontFile" uid="uid://usv2hcgtnrc8" path="res://themes/Jersey25.ttf" id="1_dpjbf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8pfl"]
+bg_color = Color(0.2, 0.023529412, 0.023529412, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnr13"]
+bg_color = Color(0.2, 0.023529412, 0.023529412, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8uvm"]
+bg_color = Color(0.2, 0.023529412, 0.023529412, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[resource]
+Button/colors/font_color = Color(0.7529412, 0.047058824, 0.047058824, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/font_sizes/font_size = 41
+Button/fonts/font = ExtResource("1_dpjbf")
+Button/styles/focus = SubResource("StyleBoxFlat_s8pfl")
+Button/styles/hover = SubResource("StyleBoxFlat_xnr13")
+Button/styles/normal = SubResource("StyleBoxFlat_q8uvm")
