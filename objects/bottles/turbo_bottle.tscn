@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc7ctq1qphuy4"]
+
+[ext_resource type="Script" uid="uid://dfuru5crd0oj0" path="res://objects/bottles/bottle.gd" id="1_lr1ly"]
+[ext_resource type="Texture2D" uid="uid://dcj5uawdpxuqr" path="res://art/turbo.png" id="2_lr1ly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fb2tq"]
+size = Vector2(14, 16)
+
+[node name="plastic_bottle" type="Area2D"]
+script = ExtResource("1_lr1ly")
+type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fb2tq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lr1ly")
+region_enabled = true
+region_rect = Rect2(3, 0, 26, 32)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
