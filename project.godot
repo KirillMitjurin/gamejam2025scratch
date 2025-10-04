@@ -15,6 +15,10 @@ run/main_scene="uid://s13tjna5afkf"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://art/icon.svg"
 
+[autoload]
+
+PlayerData="*res://art/MCsprites/back/playerData.gd"
+
 [input]
 
 ui_left={
