@@ -1,7 +1,6 @@
 extends HSlider
 
 @export var bus_name: String
-@export var epic: AudioStream
 
 var bus_index: int
 
@@ -12,4 +11,3 @@ func _ready():
 
 func _value_changed(new_value: float) -> void:
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(new_value))
-	

@@ -8,6 +8,8 @@ func _ready():
 		print("Playlist is empty!")
 		return
 	
+	bus = "Music"
+	
 	play_tracks()
 
 func play_tracks():

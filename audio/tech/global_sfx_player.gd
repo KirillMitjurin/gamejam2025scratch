@@ -1,1 +1,16 @@
 extends Node
+
+func play_sound(target_node: Node, audio_stream: AudioStream) -> AudioStreamPlayer:
+	var player = AudioStreamPlayer.new()    
+	target_node.add_child(player)
+	
+	player.bus = "SFX"
+	player.stream = audio_stream
+	player.play()
+	
+	_free_audio_player(player, audio_stream)
+	return player
+
+func _free_audio_player(player: AudioStreamPlayer, audio_stream: AudioStream):
+	await get_tree().create_timer(audio_stream.get_length()).timeout
+	player.queue_free()	
