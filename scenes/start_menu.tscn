@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="1_thu50"]
 [ext_resource type="PackedScene" uid="uid://cfhh37ndcorb7" path="res://objects/UI/volume_slider.tscn" id="2_m7x51"]
-[ext_resource type="PackedScene" uid="uid://bv0agghf41ede" path="res://audio/buses/music_player.tscn" id="3_m7x51"]
+[ext_resource type="PackedScene" uid="uid://bv0agghf41ede" path="res://audio/tech/music_player.tscn" id="3_m7x51"]
 [ext_resource type="AudioStream" uid="uid://n1gkwimr6vqv" path="res://audio/sfx/Bruh.mp3" id="4_h61rw"]
 [ext_resource type="AudioStream" uid="uid://b3gif8c43crgj" path="res://audio/music/15 Step.mp3" id="5_fcv5n"]
 
