@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var pick: AudioStream
 @export var hud: PlayerHud
 
 @export_range(0, 200) var base_speed = 150.0

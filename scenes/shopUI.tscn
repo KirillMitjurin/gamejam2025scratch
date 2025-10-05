@@ -126,7 +126,6 @@ offset_top = 480.0
 offset_right = 116.0
 offset_bottom = 512.0
 item_name = "Apartment key"
-cost = 200
 
 [node name="MoneyLabel" type="Label" parent="."]
 layout_mode = 0

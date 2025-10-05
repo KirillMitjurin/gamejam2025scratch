@@ -21,7 +21,7 @@ func _on_hover_exit():
 func _on_pressed():
 	if PlayerData.bottles >= cost:
 		PlayerData.bottles -= cost
-		get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/finalComics.tscn")
 		
 		hide()
 		

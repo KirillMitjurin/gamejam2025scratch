@@ -42,10 +42,9 @@ tile_map_data = PackedByteArray("AAAKAAIADAAAAAIAAAAKAAMADAAAAAMAAAALAAAADAABAAA
 [node name="2D_objects" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="2D_objects" node_paths=PackedStringArray("game", "hud") instance=ExtResource("4_choun")]
+[node name="Player" parent="2D_objects" node_paths=PackedStringArray("hud") instance=ExtResource("4_choun")]
 position = Vector2(110, 117)
 script = ExtResource("5_ya4ey")
-game = NodePath("../..")
 hud = NodePath("../../CanvasLayer/PlayerHud")
 
 [node name="Camera2D" type="Camera2D" parent="2D_objects/Player"]
@@ -85,6 +84,11 @@ tile_set = SubResource("TileSet_jkv2x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="BlackFade" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1168.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
+
 [node name="PlayerHud" parent="CanvasLayer" instance=ExtResource("6_eb6dy")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_trceg")]
@@ -93,11 +97,6 @@ offset_left = 462.0
 offset_top = 272.0
 offset_right = -465.0
 offset_bottom = -298.0
-
-[node name="BlackFade" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1168.0
-offset_bottom = 669.0
-color = Color(0, 0, 0, 1)
 
 [node name="Wc" type="Sprite2D" parent="."]
 position = Vector2(834, 16)
