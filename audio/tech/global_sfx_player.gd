@@ -14,4 +14,5 @@ func play_sound(target_node: Node, audio_stream: AudioStream, autoplay: bool = t
 
 func _free_audio_player(player: AudioStreamPlayer, audio_stream: AudioStream):
 	await get_tree().create_timer(audio_stream.get_length()).timeout
-	player.queue_free()	
+	if is_instance_valid(player):
+		player.queue_free()	
