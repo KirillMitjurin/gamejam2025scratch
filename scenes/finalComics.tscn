@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqjno5k7856p3"]
+
+[ext_resource type="Script" uid="uid://cxcdpgantqeyf" path="res://scenes/final_comics.gd" id="1_1kqbo"]
+[ext_resource type="Texture2D" uid="uid://tu1tonpl6p0l" path="res://art/Comic/1.png" id="1_vx725"]
+[ext_resource type="AudioStream" uid="uid://g56byvyyasjd" path="res://audio/music/outro v muu lokatsion.wav" id="2_r7p5m"]
+[ext_resource type="Texture2D" uid="uid://c4ni108noy4qp" path="res://art/Comic/2.png" id="3_exwhu"]
+[ext_resource type="Texture2D" uid="uid://csq3psbofmjd8" path="res://art/Comic/3.png" id="4_1kqbo"]
+[ext_resource type="Texture2D" uid="uid://ojg4chxdokhe" path="res://art/Comic/4.png" id="5_6sr5n"]
+
+[node name="FinalComics" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_r7p5m")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(17.960217, 10.142212)
+texture = ExtResource("1_vx725")
+stretch_mode = 6
+script = ExtResource("1_1kqbo")
+
+[node name="pic1" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = -266.0
+offset_right = 1161.0
+offset_bottom = 743.0
+texture = ExtResource("1_vx725")
+
+[node name="pic2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = -289.0
+offset_right = 64.0
+offset_bottom = -225.0
+scale = Vector2(18.108015, 16.406195)
+texture = ExtResource("3_exwhu")
+
+[node name="pic3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = -238.00002
+offset_right = 64.0
+offset_bottom = -174.00002
+scale = Vector2(18.015593, 15.854962)
+texture = ExtResource("4_1kqbo")
+
+[node name="pic4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = -35.0
+offset_right = 67.0
+offset_bottom = 29.0
+scale = Vector2(18.18585, 11.251075)
+texture = ExtResource("5_6sr5n")
+stretch_mode = 2
