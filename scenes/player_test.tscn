@@ -40,7 +40,6 @@ position_smoothing_speed = 3.0
 
 [node name="Altgirl" parent="2D_objects" instance=ExtResource("8_k3741")]
 position = Vector2(232, 96)
-script = ExtResource("11_l6nol")
 
 [node name="gay" parent="2D_objects" instance=ExtResource("13_6m58v")]
 position = Vector2(240, 48)
@@ -50,7 +49,6 @@ position = Vector2(296, 40)
 
 [node name="punk" parent="2D_objects" instance=ExtResource("11_qtbut")]
 position = Vector2(296, 104)
-script = ExtResource("11_l6nol")
 
 [node name="Girl" parent="2D_objects" instance=ExtResource("10_qtbut")]
 position = Vector2(168, 136)

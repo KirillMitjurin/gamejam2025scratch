@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://da4ow3ceb5jja"]
+[gd_scene load_steps=5 format=3 uid="uid://da4ow3ceb5jja"]
 
+[ext_resource type="Script" uid="uid://3g8brb2jxno0" path="res://objects/npcs/npc.gd" id="1_18bu6"]
 [ext_resource type="Texture2D" uid="uid://cst6n7ko3bt0d" path="res://art/NPC/gay.png" id="1_y0nwk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_18bu6"]
@@ -18,6 +19,7 @@ radius = 5.0
 
 [node name="gay" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_18bu6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_18bu6")

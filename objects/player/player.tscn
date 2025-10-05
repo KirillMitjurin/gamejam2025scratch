@@ -17,9 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://bo2uadb5hhe66" path="res://art/MCsprites/back/3.png" id="15_ja0yg"]
 [ext_resource type="Texture2D" uid="uid://capvx5vmyl1ti" path="res://art/MCsprites/back/4.png" id="16_3nl4h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdpfy"]
-size = Vector2(18, 10)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_px1tj"]
 atlas = ExtResource("1_x5bgp")
 region = Rect2(6, 0, 17, 30)
@@ -167,14 +164,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5bgp"]
+radius = 5.0
+
 [node name="Player2" type="CharacterBody2D"]
 y_sort_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11)
-shape = SubResource("RectangleShape2D_fdpfy")
 
 [node name="PlayerSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bwbw2")
 animation = &"walking_left"
 frame_progress = 0.66879725
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_x5bgp")
