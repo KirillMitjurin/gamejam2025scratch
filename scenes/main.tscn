@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://da4ow3ceb5jja" path="res://objects/npcs/gay.tscn" id="9_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://bhp7mqubxw6px" path="res://objects/npcs/girl.tscn" id="10_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cjn7vvic2hkdj" path="res://objects/lamp/lamp.tscn" id="11_a8y0u"]
-[ext_resource type="PackedScene" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://k4c5cxosv5h6" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a8y0u"]
 scenes/1/scene = ExtResource("11_a8y0u")
@@ -26,7 +26,7 @@ sources/0 = SubResource("TileSetScenesCollectionSource_a8y0u")
 script = ExtResource("1_o6xl0")
 
 [node name="NightFilter" type="CanvasModulate" parent="."]
-color = Color(0.1474869, 0.1664092, 0.2152876, 1)
+color = Color(0.13037938, 0.14933155, 0.19245178, 1)
 
 [node name="Tiles" parent="." instance=ExtResource("2_tipki")]
 z_index = -100
@@ -78,7 +78,7 @@ position = Vector2(-342, 15)
 
 [node name="lambid" type="TileMapLayer" parent="2D_objects"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAPb/AAAAAAAAAQASAPb/AAAAAAAAAQAFAAkAAAAAAAAAAQASAAkAAAAAAAAAAQAeAAEAAAAAAAAAAQApAAEAAAAAAAAAAQDy/wEAAAAAAAAAAQD6/wEAAAAAAAAAAQAFAAEAAAAAAAAAAQASAAEAAAAAAAAAAQAyAP//AAAAAAAAAQAwAPX/AAAAAAAAAQAtAO//AAAAAAAAAQAjAO7/AAAAAAAAAQAaAO7/AAAAAAAAAQAOAO7/AAAAAAAAAQABAO7/AAAAAAAAAQD4/+7/AAAAAAAAAQAbAPX/AAAAAAAAAQDt//7/AAAAAAAAAQDt//L/AAAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAFAPb/AAAAAAAAAQASAPb/AAAAAAAAAQAFAAkAAAAAAAAAAQASAAkAAAAAAAAAAQAeAAEAAAAAAAAAAQApAAEAAAAAAAAAAQDy/wEAAAAAAAAAAQD6/wEAAAAAAAAAAQAFAAEAAAAAAAAAAQASAAEAAAAAAAAAAQAyAP//AAAAAAAAAQAwAPX/AAAAAAAAAQAtAO//AAAAAAAAAQAjAO7/AAAAAAAAAQAaAO7/AAAAAAAAAQAOAO7/AAAAAAAAAQABAO7/AAAAAAAAAQD4/+7/AAAAAAAAAQAbAPX/AAAAAAAAAQDt//7/AAAAAAAAAQDt//L/AAAAAAAAAQAwAN7/AAAAAAAAAQAtAOX/AAAAAAAAAQA=")
 tile_set = SubResource("TileSet_jkv2x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

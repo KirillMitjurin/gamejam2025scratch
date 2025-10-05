@@ -1,11 +1,18 @@
-[gd_scene load_steps=36 format=3 uid="uid://vguyrvic8o2k"]
+[gd_scene load_steps=43 format=3 uid="uid://vguyrvic8o2k"]
 
+[ext_resource type="Texture2D" uid="uid://dnpfg7iqcbbmw" path="res://art/Freezing/1.png" id="1_lc6id"]
 [ext_resource type="Texture2D" uid="uid://c0m0lk5u06tcc" path="res://art/MCsprites/straight/1.png" id="1_x5bgp"]
 [ext_resource type="Texture2D" uid="uid://cga76ivhhniyk" path="res://art/MCsprites/straight/2.png" id="2_dthqj"]
+[ext_resource type="Texture2D" uid="uid://cwydii0fumxco" path="res://art/Freezing/2.png" id="2_tmow5"]
+[ext_resource type="Texture2D" uid="uid://cvfforgkaoou8" path="res://art/Freezing/3.png" id="3_r5k7d"]
 [ext_resource type="Texture2D" uid="uid://xljwmojijmhf" path="res://art/MCsprites/straight/3.png" id="3_xlkbi"]
 [ext_resource type="Texture2D" uid="uid://do2cg5117n5wc" path="res://art/MCsprites/straight/4.png" id="4_l55sg"]
+[ext_resource type="Texture2D" uid="uid://dmu7xffyrxxrf" path="res://art/Freezing/4.png" id="4_y35q5"]
 [ext_resource type="Texture2D" uid="uid://cdgje0dc67gqi" path="res://art/MCsprites/sideL/1.png" id="5_28utn"]
+[ext_resource type="Texture2D" uid="uid://d224wbghn7w7y" path="res://art/Freezing/5.png" id="5_no36w"]
+[ext_resource type="Texture2D" uid="uid://c4dwu18hr4ot5" path="res://art/Freezing/6.png" id="6_tk20p"]
 [ext_resource type="Texture2D" uid="uid://dhye6engnyhcu" path="res://art/MCsprites/sideL/2.png" id="6_yyeqs"]
+[ext_resource type="Texture2D" uid="uid://dyqy57l0qfk60" path="res://art/Freezing/7.png" id="7_1g4tr"]
 [ext_resource type="Texture2D" uid="uid://joe21orbqys8" path="res://art/MCsprites/sideL/3.png" id="7_u8bnf"]
 [ext_resource type="Texture2D" uid="uid://cbrkwylq4f70f" path="res://art/MCsprites/sideL/4.png" id="8_lc6id"]
 [ext_resource type="Texture2D" uid="uid://bm30atcf04w44" path="res://art/MCsprites/sideR/1.png" id="9_tmow5"]
@@ -87,6 +94,32 @@ region = Rect2(5, 0, 17, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwbw2"]
 animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_lc6id")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_tmow5")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_r5k7d")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_y35q5")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_no36w")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_tk20p")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_1g4tr")
+}],
+"loop": false,
+"name": &"freezing",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_px1tj")
@@ -172,8 +205,9 @@ y_sort_enabled = true
 
 [node name="PlayerSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bwbw2")
-animation = &"walking_left"
-frame_progress = 0.66879725
+animation = &"freezing"
+frame = 1
+frame_progress = 0.26952153
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 14)
