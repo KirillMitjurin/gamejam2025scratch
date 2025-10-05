@@ -2,11 +2,12 @@ extends Node2D
 
 @export var bottle_prefabs : Array[PackedScene]
 @onready var sprite = $"Sprite2D"
+@onready var timer = $Timer
+var random = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	sprite.hide()
-
-var random = RandomNumberGenerator.new()
+	
 	
 func get_random_position(size) -> Vector2:
 	random.randomize()
@@ -20,3 +21,4 @@ func _on_timer_timeout() -> void:
 		var bottle = bottle_prefabs[index].instantiate()
 		#bottle.position = position
 		add_child(bottle)
+		timer.wait_time = random.randf_range(10, 15)

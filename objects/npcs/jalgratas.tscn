@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://k4c5cxosv5h6"]
+
+[ext_resource type="Texture2D" uid="uid://bjsary4l1inja" path="res://art/man.png" id="1_jqalu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ld5ex"]
+radius = 7.0
+
+[node name="jalgratas" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("1_jqalu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_ld5ex")
