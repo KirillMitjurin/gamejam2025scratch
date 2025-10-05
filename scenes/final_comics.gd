@@ -53,5 +53,4 @@ func _next_image():
 
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		_next_image()  # skip to next image on key press
+	pass # skip to next image on key press
