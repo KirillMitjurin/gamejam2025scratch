@@ -1,14 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://od885ktepu7l"]
 
-[ext_resource type="Script" path="res://scenes/start_menu.gd" id="1_4v6gu"]
+[ext_resource type="Script" uid="uid://cqwrw8231c55m" path="res://scenes/start_menu.gd" id="1_4v6gu"]
 [ext_resource type="Texture2D" uid="uid://csmsncua5ucos" path="res://art/Menu/Background.png" id="1_fcv5n"]
 [ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="1_thu50"]
-[ext_resource type="Texture2D" uid="uid://eekn7tmt4xvl" path="res://art/Menu/start/Start.png" id="3_4v6gu"]
 [ext_resource type="PackedScene" uid="uid://bv0agghf41ede" path="res://audio/tech/music_player.tscn" id="3_m7x51"]
-[ext_resource type="AudioStream" uid="uid://b3gif8c43crgj" path="res://audio/music/15 Step.mp3" id="5_fcv5n"]
-[ext_resource type="Texture2D" uid="uid://bvee5uiifesrw" path="res://art/Menu/exit/Exit.png" id="5_u4qax"]
-[ext_resource type="Texture2D" uid="uid://bbm45yrrvsaga" path="res://art/Menu/exit/Exit hover.png" id="7_nxjfj"]
-[ext_resource type="PackedScene" path="res://objects/UI/slider_container.tscn" id="8_u4qax"]
+[ext_resource type="AudioStream" uid="uid://dfuywbryvdftj" path="res://audio/music/intro.wav" id="6_4v6gu"]
 [ext_resource type="PackedScene" uid="uid://dgklfxmr2hhax" path="res://objects/UI/slider_container.tscn" id="8_u4qax"]
 
 [node name="StartMenu" type="Control"]
@@ -65,7 +61,7 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="MusicPlayer" parent="." instance=ExtResource("3_m7x51")]
-playlist = Array[AudioStream]([ExtResource("5_fcv5n")])
+playlist = Array[AudioStream]([ExtResource("6_4v6gu")])
 
 [connection signal="pressed" from="ButtonContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ButtonContainer/Exit" to="." method="_on_exit_pressed"]
