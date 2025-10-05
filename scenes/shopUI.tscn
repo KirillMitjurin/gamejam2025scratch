@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjdh0ma1mpsev"]
+[gd_scene load_steps=13 format=3 uid="uid://cjdh0ma1mpsev"]
 
 [ext_resource type="Script" uid="uid://bv2p2w0pt4on1" path="res://scenes/shopUI.gd" id="1_1lkux"]
 [ext_resource type="Texture2D" uid="uid://bsutfxmc1lqdi" path="res://art/backgound shop.png" id="2_4kgi4"]
@@ -11,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://5p1cosr7845w" path="res://art/boots.png" id="7_0plyh"]
 [ext_resource type="Texture2D" uid="uid://dc2lqhw81wekf" path="res://art/boots2.png" id="8_cyas3"]
 [ext_resource type="Texture2D" uid="uid://blqhss83c0126" path="res://art/boots3.png" id="9_f71jw"]
+[ext_resource type="PackedScene" uid="uid://fvp308y35isa" path="res://scenes/shop_key_item.tscn" id="10_f71jw"]
 
-[node name="ShopUI" type="Control"]
+[node name="ShopUI" type="Control" node_paths=PackedStringArray("hats", "boots")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +25,8 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1lkux")
+hats = [NodePath("Shop/RedHat"), NodePath("Shop/BlueHat"), NodePath("Shop/YellowHat")]
+boots = [NodePath("Shop/RedBoots"), NodePath("Shop/BlueBoots"), NodePath("Shop/YellowBoots")]
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -46,7 +49,7 @@ offset_right = 570.81604
 offset_bottom = 395.63196
 texture = ExtResource("4_4kgi4")
 
-[node name="RedHat" parent="Shop" node_paths=PackedStringArray("shop_ui", "next_item") instance=ExtResource("4_ojcbc")]
+[node name="RedHat" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 228.0
@@ -54,10 +57,8 @@ offset_right = 113.0
 offset_bottom = 260.0
 heat_bonus_percent = 25
 shop_ui = NodePath("../..")
-next_item = NodePath("../BlueHat")
 
-[node name="BlueHat" parent="Shop" node_paths=PackedStringArray("shop_ui", "next_item") instance=ExtResource("4_ojcbc")]
-visible = false
+[node name="BlueHat" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 228.0
@@ -67,10 +68,8 @@ texture_normal = ExtResource("5_dxlgq")
 item_name = "Blue hat"
 cost = 10
 shop_ui = NodePath("../..")
-next_item = NodePath("../YellowHat")
 
 [node name="YellowHat" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
-visible = false
 layout_mode = 0
 offset_left = 81.0
 offset_top = 228.0
@@ -82,7 +81,7 @@ cost = 15
 heat_bonus_percent = 75
 shop_ui = NodePath("../..")
 
-[node name="RedBoots" parent="Shop" node_paths=PackedStringArray("shop_ui", "next_item") instance=ExtResource("4_ojcbc")]
+[node name="RedBoots" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
 layout_mode = 0
 offset_left = 467.0
 offset_top = 233.99997
@@ -90,13 +89,11 @@ offset_right = 499.0
 offset_bottom = 266.0
 texture_normal = ExtResource("7_0plyh")
 item_name = "Red boots"
-speed_bonus_percent = 25
+speed_bonus_percent = 20
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
-next_item = NodePath("../BlueBoots")
 
-[node name="BlueBoots" parent="Shop" node_paths=PackedStringArray("shop_ui", "next_item") instance=ExtResource("4_ojcbc")]
-visible = false
+[node name="BlueBoots" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
 layout_mode = 0
 offset_left = 467.0
 offset_top = 233.99997
@@ -105,13 +102,11 @@ offset_bottom = 266.0
 texture_normal = ExtResource("8_cyas3")
 item_name = "Blue boots"
 cost = 10
-speed_bonus_percent = 50
+speed_bonus_percent = 40
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
-next_item = NodePath("../YellowBoots")
 
 [node name="YellowBoots" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
-visible = false
 layout_mode = 0
 offset_left = 467.0
 offset_top = 233.99997
@@ -120,9 +115,18 @@ offset_bottom = 266.0
 texture_normal = ExtResource("9_f71jw")
 item_name = "Yellow boots"
 cost = 15
-speed_bonus_percent = 75
+speed_bonus_percent = 60
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
+
+[node name="Key" parent="Shop" instance=ExtResource("10_f71jw")]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 480.0
+offset_right = 116.0
+offset_bottom = 512.0
+item_name = "Apartment key"
+cost = 200
 
 [node name="MoneyLabel" type="Label" parent="."]
 layout_mode = 0

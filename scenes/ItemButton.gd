@@ -8,7 +8,6 @@ class_name ShopItem
 
 @export var message_label: Label
 @export var shop_ui: Control
-@export var next_item: ShopItem
 
 func _ready():
 	_on_hover_exit()
@@ -35,19 +34,16 @@ func _on_pressed():
 		PlayerData.bottles -= cost
 		
 		if (speed_bonus_percent != 0):
+			PlayerData.speed_upgrade += 1
 			PlayerData.speed_multiplier = 1 + speed_bonus_percent / 100.0;
 			message_label.text = "%s purchased! New speed: %d%%" % [item_name, 100 + speed_bonus_percent]
 		if (heat_bonus_percent != 0):
+			PlayerData.heat_upgrade += 1
 			PlayerData.heat_multiplier = 1 + heat_bonus_percent / 100.0;
 			message_label.text = "%s purchased! New heat: %d%%" % [item_name, 100 + heat_bonus_percent]
 			
 		if shop_ui:
-			shop_ui.update_ui()
-		
-		if next_item:
-			next_item.show()
-		hide()
-			
+			shop_ui.update_ui()	
 		
 	else:
 		message_label.text = "Not enough bottles"
