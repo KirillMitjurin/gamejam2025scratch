@@ -55,6 +55,7 @@ offset_left = 81.0
 offset_top = 228.0
 offset_right = 113.0
 offset_bottom = 260.0
+cost = 15
 heat_bonus_percent = 25
 shop_ui = NodePath("../..")
 
@@ -66,7 +67,7 @@ offset_right = 113.0
 offset_bottom = 260.0
 texture_normal = ExtResource("5_dxlgq")
 item_name = "Blue hat"
-cost = 10
+cost = 20
 shop_ui = NodePath("../..")
 
 [node name="YellowHat" parent="Shop" node_paths=PackedStringArray("shop_ui") instance=ExtResource("4_ojcbc")]
@@ -77,7 +78,7 @@ offset_right = 113.0
 offset_bottom = 260.0
 texture_normal = ExtResource("6_0plyh")
 item_name = "Yellow Hat"
-cost = 15
+cost = 25
 heat_bonus_percent = 75
 shop_ui = NodePath("../..")
 
@@ -89,6 +90,7 @@ offset_right = 499.0
 offset_bottom = 266.0
 texture_normal = ExtResource("7_0plyh")
 item_name = "Red boots"
+cost = 15
 speed_bonus_percent = 20
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
@@ -101,7 +103,7 @@ offset_right = 499.0
 offset_bottom = 266.0
 texture_normal = ExtResource("8_cyas3")
 item_name = "Blue boots"
-cost = 10
+cost = 20
 speed_bonus_percent = 40
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
@@ -114,7 +116,7 @@ offset_right = 499.0
 offset_bottom = 266.0
 texture_normal = ExtResource("9_f71jw")
 item_name = "Yellow boots"
-cost = 15
+cost = 25
 speed_bonus_percent = 60
 heat_bonus_percent = 0
 shop_ui = NodePath("../..")
@@ -126,6 +128,7 @@ offset_top = 480.0
 offset_right = 116.0
 offset_bottom = 512.0
 item_name = "Apartment key"
+cost = 100
 
 [node name="MoneyLabel" type="Label" parent="."]
 layout_mode = 0

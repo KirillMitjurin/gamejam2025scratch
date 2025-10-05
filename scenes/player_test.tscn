@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://s13tjna5afkf"]
+[gd_scene load_steps=15 format=4 uid="uid://s13tjna5afkf"]
 
 [ext_resource type="Script" uid="uid://bupf0khp6py6r" path="res://objects/tilemaps/game_scene.gd" id="1_2ue4q"]
 [ext_resource type="PackedScene" uid="uid://bcdqnq4peugla" path="res://objects/tilemaps/tiles.tscn" id="1_8ut53"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ki1c4iay5h2v" path="res://objects/tilemaps/objects.tscn" id="2_2ue4q"]
 [ext_resource type="PackedScene" uid="uid://mrxfvhu3qygw" path="res://objects/player/player_hud.tscn" id="2_4fwf8"]
 [ext_resource type="Script" uid="uid://bcus32sb27hu1" path="res://objects/player/player.gd" id="2_6p80c"]
+[ext_resource type="AudioStream" uid="uid://cg1l0nxuq2q66" path="res://audio/sfx/bottle pick up.mp3" id="6_6m58v"]
 [ext_resource type="PackedScene" uid="uid://df0kfl5pieto" path="res://objects/UI/pause_menu.tscn" id="7_dxymg"]
 [ext_resource type="PackedScene" uid="uid://d4mcb1kimmtj1" path="res://objects/npcs/handicapped.tscn" id="8_e1poy"]
 [ext_resource type="PackedScene" uid="uid://bbochtm4xvp5c" path="res://objects/npcs/altgirl.tscn" id="8_k3741"]
@@ -29,8 +30,8 @@ y_sort_enabled = true
 [node name="Player" parent="2D_objects" node_paths=PackedStringArray("hud") instance=ExtResource("1_fdpfy")]
 position = Vector2(110, 117)
 script = ExtResource("2_6p80c")
+pick_bottle = ExtResource("6_6m58v")
 hud = NodePath("../../CanvasLayer/PlayerHud")
-speed = 150.0
 
 [node name="Camera2D" type="Camera2D" parent="2D_objects/Player"]
 zoom = Vector2(3, 3)

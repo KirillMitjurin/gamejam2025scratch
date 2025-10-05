@@ -1,12 +1,13 @@
 extends Node
 
-func play_sound(target_node: Node, audio_stream: AudioStream) -> AudioStreamPlayer:
+func play_sound(target_node: Node, audio_stream: AudioStream, autoplay: bool = true) -> AudioStreamPlayer:
 	var player = AudioStreamPlayer.new()    
 	target_node.add_child(player)
 	
 	player.bus = "SFX"
 	player.stream = audio_stream
-	player.play()
+	if (autoplay):
+		player.play()
 	
 	_free_audio_player(player, audio_stream)
 	return player
