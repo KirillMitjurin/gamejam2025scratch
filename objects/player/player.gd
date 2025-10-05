@@ -3,14 +3,12 @@ extends CharacterBody2D
 @export var hud: PlayerHud
 
 @export_range(0, 200) var base_speed = 150.0
-@onready var speed = base_speed * PlayerData.speed
+@onready var speed = base_speed * PlayerData.speed_multiplier
+
+@onready var local_hotness = 10 * PlayerData.heat_multiplier
 
 var anim
-@onready var local_hotness = PlayerData.heat
 @onready var player_sprite : AnimatedSprite2D = $PlayerSprite2D
-@onready var heat_bar = $player
-
-func _re
 
 func _physics_process(delta: float) -> void:
 

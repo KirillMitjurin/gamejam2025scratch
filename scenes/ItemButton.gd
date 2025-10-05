@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 class_name ShopItem
 
 @export var item_name = "Item"
@@ -32,7 +32,7 @@ func _on_pressed():
 			message_label.text = "%s purchased! New speed: %d%" % [item_name, (100 + speed_bonus_percent)]
 		if (heat_bonus_percent != 0):
 			PlayerData.heat_multiplier = 1 + heat_bonus_percent / 100.0;
-			message_label.text = "%s purchased! New speed: %d%" % [item_name, (100 + heat_bonus_percent)]
+			message_label.text = "%s purchased! New warmth: %d%%" % [item_name, 100 + heat_bonus_percent]
 			 
 		if shop_ui:
 			shop_ui.update_ui()

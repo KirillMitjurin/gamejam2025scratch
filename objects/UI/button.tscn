@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gbhdubhtn76y"]
 
-[ext_resource type="Theme" uid="uid://dd554cvuegyjx" path="res://themes/button.tres" id="1_6figf"]
+[ext_resource type="Theme" uid="uid://drbplrxr88qty" path="res://themes/button.tres" id="1_6figf"]
 
 [node name="Button" type="Button"]
 anchors_preset = 8
