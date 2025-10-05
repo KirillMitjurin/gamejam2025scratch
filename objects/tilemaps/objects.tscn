@@ -85,6 +85,7 @@ texture = ExtResource("5_tdba0")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8vky"]
 texture = ExtResource("6_j8iy8")
 0:0/0 = 0
+0:0/0/y_sort_origin = 3
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.6978817, 8, 2.5180225, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsc66"]
@@ -94,9 +95,17 @@ texture = ExtResource("7_i7hae")
 2:0/0 = 0
 3:0/0 = 0
 0:1/0 = 0
+0:1/0/z_index = -50
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/z_index = -50
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/z_index = -50
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/z_index = -50
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lulpo"]
 texture = ExtResource("8_tcftu")
@@ -130,11 +139,10 @@ texture = ExtResource("9_jshij")
 margins = Vector2i(8, 0)
 texture_region_size = Vector2i(17, 16)
 use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0 = 0
-0:0/0/y_sort_origin = 20
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_lulpo"]
 physics_layer_0/collision_layer = 1
@@ -150,4 +158,5 @@ sources/12 = SubResource("TileSetAtlasSource_00trn")
 sources/0 = SubResource("TileSetScenesCollectionSource_yijjo")
 
 [node name="Objects" type="TileMapLayer"]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_lulpo")

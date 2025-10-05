@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs3trbss1ousv"]
+[gd_scene load_steps=6 format=3 uid="uid://bs3trbss1ousv"]
 
 [ext_resource type="Texture2D" uid="uid://4oqmvvlrhdgp" path="res://art/NPC/punk1.png" id="1_wvtx6"]
+[ext_resource type="Script" uid="uid://3g8brb2jxno0" path="res://objects/npcs/npc.gd" id="1_y4f6c"]
 [ext_resource type="Texture2D" uid="uid://d26rjl3knoqfp" path="res://art/NPC/punk2.png" id="2_y4f6c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8csc5"]
@@ -22,6 +23,7 @@ radius = 4.0
 
 [node name="punk" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_y4f6c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -3)

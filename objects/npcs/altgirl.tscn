@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbochtm4xvp5c"]
+[gd_scene load_steps=7 format=3 uid="uid://bbochtm4xvp5c"]
 
 [ext_resource type="Texture2D" uid="uid://cphkxxb26k447" path="res://art/NPC/altgirl1.png" id="1_a6xjw"]
+[ext_resource type="Script" uid="uid://3g8brb2jxno0" path="res://objects/npcs/npc.gd" id="1_bmgtp"]
 [ext_resource type="Texture2D" uid="uid://fjwxvwa67a05" path="res://art/NPC/altgirl2.png" id="2_bmgtp"]
 [ext_resource type="Texture2D" uid="uid://7tqvfphw1n4o" path="res://art/NPC/altgirl3.png" id="3_761cx"]
 
@@ -26,6 +27,7 @@ radius = 5.0
 
 [node name="Altgirl" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_bmgtp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, 0)
