@@ -5,6 +5,8 @@ class_name PlayerHud
 @export var temperature_bar: Label
 @onready var heat_bar = $temp/ProgressBar
 
+func _ready():
+	bottle_counter.text = str(PlayerData.bottles)
 
 func update_bottle_count(): 
 	bottle_counter.text = str(PlayerData.bottles)

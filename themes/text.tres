@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://kpg2hph0ht5c"]
+
+[ext_resource type="FontFile" uid="uid://usv2hcgtnrc8" path="res://themes/Jersey25.ttf" id="1_7pmjw"]
+
+[resource]
+Label/font_sizes/font_size = 41
+Label/fonts/font = ExtResource("1_7pmjw")

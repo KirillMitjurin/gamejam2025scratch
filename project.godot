@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://5oesmymgols4"
 
 [autoload]
 
-PlayerData="*res://art/MCsprites/back/playerData.gd"
+PlayerData="*res://script/playerData.gd"
 SfxPlayer="*res://audio/tech/global_sfx_player.gd"
 
 [input]

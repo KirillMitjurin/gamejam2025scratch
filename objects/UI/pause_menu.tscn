@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dj1ll10c4u327" path="res://objects/UI/pause_menu.gd" id="1_lauum"]
 [ext_resource type="Shader" uid="uid://byrv537rgwu0j" path="res://objects/UI/pause_menu.gdshader" id="2_nkf5q"]
 [ext_resource type="PackedScene" uid="uid://gbhdubhtn76y" path="res://objects/UI/button.tscn" id="3_mebg1"]
-[ext_resource type="PackedScene" path="res://objects/UI/slider_container.tscn" id="4_al7mv"]
+[ext_resource type="PackedScene" uid="uid://dgklfxmr2hhax" path="res://objects/UI/slider_container.tscn" id="4_al7mv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mebg1"]
 shader = ExtResource("2_nkf5q")

@@ -1,16 +1,14 @@
 extends Control
 
 
-@onready var label_money = $VBoxContainer/MoneyLabel
-@onready var label_message = $VBoxContainer/LabelMessage
-@onready var speed_cost_label = $VBoxContainer/HBoxContainer/VBoxContainerSpeed/LabelCost
-@onready var capacity_cost_label = $VBoxContainer/HBoxContainer/VBoxContainerCapacity/LabelCost
+@onready var label_money = $MoneyLabel
+@onready var label_message = $LabelMessage
 
 func _ready():
 	update_ui()
 	
 func update_ui(): 
-	label_money.text = "Money: %d" %PlayerData.money
+	label_money.text = "Bottles: %d" %PlayerData.bottles
 	
 func _on_close_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/player_test.tscn")

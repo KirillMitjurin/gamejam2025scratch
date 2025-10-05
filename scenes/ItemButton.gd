@@ -1,13 +1,14 @@
 extends Button
+class_name ShopItem
 
-@export var item_name = ""
-@export var price = 0
-@export var speed_bonus = 0
-@export var heat_bonus = 0
+@export var item_name = "Item"
+@export var cost = 0
+@export var speed_bonus_percent = 0
+@export var heat_bonus_percent = 0
 
 @export var message_label: Label
-@export var shop_ui: Control 
-
+@export var shop_ui: Control
+@export var next_item: ShopItem
 
 
 func _ready():
@@ -17,24 +18,23 @@ func _ready():
 	
 
 func _on_hover(): 
-	if message_label:
-		message_label.text = "name: %s, price: %d" % [item_name, price]
+	message_label.text = "Cost: %d" % [cost]
 	
 func _on_hover_exit():
-	if message_label:
-		message_label.text = ""
+	message_label.text = ""
 	
-func _on_pressed(): 
-	if PlayerData.money >= price:
-		PlayerData.money -= price
-		PlayerData.speed += speed_bonus
-		PlayerData.heat += heat_bonus
-		if message_label:
-			message_label.text = " %s is purchased, now speed %d %d" % [item_name, PlayerData.speed, PlayerData.heat]
+func _on_pressed():
+	if PlayerData.bottles >= cost:
+		PlayerData.bottles -= cost
+		
+		if (speed_bonus_percent != 0):
+			PlayerData.speed_multiplier = 1 + speed_bonus_percent / 100.0;
+			message_label.text = "%s purchased! New speed: %d%" % [item_name, (100 + speed_bonus_percent)]
+		if (heat_bonus_percent != 0):
+			PlayerData.heat_multiplier = 1 + heat_bonus_percent / 100.0;
+			message_label.text = "%s purchased! New speed: %d%" % [item_name, (100 + heat_bonus_percent)]
 			 
-			
 		if shop_ui:
 			shop_ui.update_ui()
 	else:
-		if message_label:
-			message_label.text = "Not enough money"
+		message_label.text = "Not enough money"
