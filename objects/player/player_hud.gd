@@ -8,7 +8,6 @@ class_name PlayerHud
 
 func update_bottle_count(): 
 	bottle_counter.text = str(PlayerData.bottles)
-	
 
 func update_heat_bar(localheat: int):
 	heat_bar.value = localheat
