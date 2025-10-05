@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b85nvnqvefxjq"]
+
+[ext_resource type="Theme" uid="uid://kpg2hph0ht5c" path="res://themes/text.tres" id="1_8ho6b"]
+[ext_resource type="Script" uid="uid://wv1ru4lc3nmk" path="res://scenes/tutorial.gd" id="1_ph3nu"]
+[ext_resource type="Script" uid="uid://7uiptu5v32b1" path="res://scenes/fadingtext.gd" id="2_ph3nu"]
+
+[node name="Tutorial" type="Node2D" node_paths=PackedStringArray("fade_rect")]
+script = ExtResource("1_ph3nu")
+duration = 8.0
+fade_rect = NodePath("FadeRect")
+
+[node name="BackgroundRect" type="ColorRect" parent="."]
+offset_right = 1169.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
+
+[node name="TopText" type="Label" parent="."]
+offset_top = 278.0
+offset_right = 1151.0
+offset_bottom = 320.0
+size_flags_horizontal = 4
+theme = ExtResource("1_8ho6b")
+text = "You, Zoro, do not have enough money to get an apartment"
+horizontal_alignment = 1
+script = ExtResource("2_ph3nu")
+fade_duration = 2.0
+
+[node name="BottomText" type="Label" parent="."]
+offset_top = 336.0
+offset_right = 1151.0
+offset_bottom = 378.0
+size_flags_horizontal = 4
+theme = ExtResource("1_8ho6b")
+text = "Collect bottles until you can afford one"
+horizontal_alignment = 1
+script = ExtResource("2_ph3nu")
+fade_delay = 3.0
+fade_duration = 2.0
+
+[node name="FadeRect" type="ColorRect" parent="."]
+offset_right = 1169.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
