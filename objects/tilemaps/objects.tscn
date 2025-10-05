@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://ki1c4iay5h2v"]
+[gd_scene load_steps=22 format=3 uid="uid://ki1c4iay5h2v"]
 
+[ext_resource type="PackedScene" uid="uid://drmh4t54ot8hm" path="res://objects/bottles/bottle_spawner.tscn" id="1_18p5t"]
 [ext_resource type="Texture2D" uid="uid://bqqtg7n468sr1" path="res://art/pixil-frame-0.png" id="1_whcw8"]
 [ext_resource type="Texture2D" uid="uid://cda5encjqgn7b" path="res://art/kuju.png" id="2_18p5t"]
 [ext_resource type="Texture2D" uid="uid://bxkmev5hloe0b" path="res://art/Untitled-16.png" id="3_yijjo"]
@@ -9,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dxllx1q788gwt" path="res://art/pingid.png" id="7_i7hae"]
 [ext_resource type="Texture2D" uid="uid://cpp4746h8o73j" path="res://art/treeparandus.png" id="8_tcftu"]
 [ext_resource type="Texture2D" uid="uid://cgf7vnbbrajgu" path="res://art/prugi1.png" id="9_jshij"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yijjo"]
+scenes/1/scene = ExtResource("1_18p5t")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1poy"]
 texture = ExtResource("1_whcw8")
@@ -143,6 +147,7 @@ sources/6 = SubResource("TileSetAtlasSource_lulpo")
 sources/8 = SubResource("TileSetAtlasSource_xy58t")
 sources/11 = SubResource("TileSetAtlasSource_tbr7s")
 sources/12 = SubResource("TileSetAtlasSource_00trn")
+sources/0 = SubResource("TileSetScenesCollectionSource_yijjo")
 
 [node name="Objects" type="TileMapLayer"]
 tile_set = SubResource("TileSet_lulpo")

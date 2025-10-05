@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://da4ow3ceb5jja"]
+
+[ext_resource type="Texture2D" uid="uid://cst6n7ko3bt0d" path="res://art/NPC/gay.png" id="1_y0nwk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18bu6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y0nwk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1uk17"]
+radius = 5.0
+
+[node name="gay" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_18bu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_1uk17")
