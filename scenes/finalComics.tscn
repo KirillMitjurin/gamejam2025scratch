@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqjno5k7856p3"]
+[gd_scene load_steps=7 format=3 uid="uid://blxa8yu48hcto"]
 
 [ext_resource type="Script" uid="uid://cxcdpgantqeyf" path="res://scenes/final_comics.gd" id="1_1kqbo"]
 [ext_resource type="Texture2D" uid="uid://tu1tonpl6p0l" path="res://art/Comic/1.png" id="1_vx725"]
@@ -15,18 +15,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BackgroundRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_r7p5m")
 autoplay = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(17.960217, 10.142212)
+[node name="TextureRect" type="TextureRect" parent="." node_paths=PackedStringArray("fade_rect")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = -323.0
+offset_right = -270.0
+offset_bottom = -259.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.800217, 10.142212)
 texture = ExtResource("1_vx725")
 stretch_mode = 6
 script = ExtResource("1_1kqbo")
+fade_rect = NodePath("../FadeRect")
 
 [node name="pic1" type="TextureRect" parent="."]
 visible = false
@@ -65,3 +81,9 @@ offset_bottom = 29.0
 scale = Vector2(18.18585, 11.251075)
 texture = ExtResource("5_6sr5n")
 stretch_mode = 2
+
+[node name="FadeRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
