@@ -1,10 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp1wyv3c223k1"]
+[gd_scene load_steps=6 format=3 uid="uid://bp1wyv3c223k1"]
 
 [ext_resource type="Texture2D" uid="uid://dknxhwt7cob8l" path="res://art/bottle2.png" id="2_jag4s"]
 [ext_resource type="Script" uid="uid://dfuru5crd0oj0" path="res://objects/bottles/bottle.gd" id="2_vv13s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fb2tq"]
 size = Vector2(4, 16)
+
+[sub_resource type="Gradient" id="Gradient_k1ble"]
+offsets = PackedFloat32Array(0, 0.6933333)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k1ble"]
+gradient = SubResource("Gradient_k1ble")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
 
 [node name="plastic_bottle" type="Area2D"]
 script = ExtResource("2_vv13s")
@@ -18,5 +28,11 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_jag4s")
 region_enabled = true
 region_rect = Rect2(12, 0, 8, 32)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.26171887, 0.25781247)
+color = Color(1, 1, 0.39151636, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_k1ble")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -25,11 +25,16 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed)
 	
 	
-	local_hotness -= delta
+	
 	hud.update_temperature(local_hotness)
 	hud.update_heat_bar(local_hotness)
 	if local_hotness <= 0:
-		get_tree().change_scene_to_file("res://scenes/shopUI.tscn")	
+		var tree := get_tree()
+		player_sprite.play("freezing")
+		await player_sprite.animation_finished
+		tree.change_scene_to_file("res://scenes/shopUI.tscn")	
+	else:
+		local_hotness -= delta
 	# Player ANIMATION
 	anim = "idle"
 	

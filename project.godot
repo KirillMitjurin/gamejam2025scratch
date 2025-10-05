@@ -24,6 +24,11 @@ buses/default_bus_layout="uid://5oesmymgols4"
 PlayerData="*res://script/playerData.gd"
 SfxPlayer="*res://audio/tech/global_sfx_player.gd"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_left={
