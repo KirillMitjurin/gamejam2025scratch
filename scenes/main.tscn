@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://da4ow3ceb5jja" path="res://objects/npcs/gay.tscn" id="9_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://bhp7mqubxw6px" path="res://objects/npcs/girl.tscn" id="10_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cjn7vvic2hkdj" path="res://objects/lamp/lamp.tscn" id="11_a8y0u"]
-[ext_resource type="PackedScene" uid="uid://k4c5cxosv5h6" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
+[ext_resource type="PackedScene" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a8y0u"]
 scenes/1/scene = ExtResource("11_a8y0u")
@@ -22,8 +22,9 @@ scenes/1/scene = ExtResource("11_a8y0u")
 [sub_resource type="TileSet" id="TileSet_jkv2x"]
 sources/0 = SubResource("TileSetScenesCollectionSource_a8y0u")
 
-[node name="player_test2" type="Node2D"]
+[node name="player_test2" type="Node2D" node_paths=PackedStringArray("fade_rect")]
 script = ExtResource("1_o6xl0")
+fade_rect = NodePath("CanvasLayer/BlackFade")
 
 [node name="NightFilter" type="CanvasModulate" parent="."]
 color = Color(0.13037938, 0.14933155, 0.19245178, 1)
@@ -41,9 +42,10 @@ tile_map_data = PackedByteArray("AAAKAAIADAAAAAIAAAAKAAMADAAAAAMAAAALAAAADAABAAA
 [node name="2D_objects" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="2D_objects" node_paths=PackedStringArray("hud") instance=ExtResource("4_choun")]
+[node name="Player" parent="2D_objects" node_paths=PackedStringArray("game", "hud") instance=ExtResource("4_choun")]
 position = Vector2(110, 117)
 script = ExtResource("5_ya4ey")
+game = NodePath("../..")
 hud = NodePath("../../CanvasLayer/PlayerHud")
 
 [node name="Camera2D" type="Camera2D" parent="2D_objects/Player"]
@@ -91,6 +93,11 @@ offset_left = 462.0
 offset_top = 272.0
 offset_right = -465.0
 offset_bottom = -298.0
+
+[node name="BlackFade" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1168.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
 
 [node name="Wc" type="Sprite2D" parent="."]
 position = Vector2(834, 16)
