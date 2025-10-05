@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://da4ow3ceb5jja" path="res://objects/npcs/gay.tscn" id="9_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://bhp7mqubxw6px" path="res://objects/npcs/girl.tscn" id="10_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cjn7vvic2hkdj" path="res://objects/lamp/lamp.tscn" id="11_a8y0u"]
-[ext_resource type="PackedScene" uid="uid://k4c5cxosv5h6" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
+[ext_resource type="PackedScene" path="res://objects/npcs/jalgratas.tscn" id="11_jkv2x"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a8y0u"]
 scenes/1/scene = ExtResource("11_a8y0u")
@@ -84,7 +84,6 @@ tile_set = SubResource("TileSet_jkv2x")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PlayerHud" parent="CanvasLayer" instance=ExtResource("6_eb6dy")]
-visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_trceg")]
 visible = false
